@@ -1,6 +1,6 @@
 # kirby-voice-dna-extractor
 
-*This skill is part of the [Kirby Skills Collection](https://github.com/markkirby125/kirby-skills-collection).*
+*This skill is part of the [Tiffany Lambert PLR Skills Collection](https://github.com/markkirby125/kirby-skills-tiff-collection).*
 
 Codifies an author's unique voice, sentence cadence, vocabulary, and ideological stance into a portable, machine-enforceable Voice DNA Specification to eliminate bland AI slop and generic PLR tone.
 
@@ -24,6 +24,5 @@ Copy and paste this directly to your AI (Cursor, Windsurf, Claude Code, Antigrav
 
 ## Tech Stack
 
-- **Format**: Markdown / YAML
-- **Architecture**: Tier 1/2 Single File Specification
+- **Format**: Markdown / YAML Matrix Specification
 - **Compatibility**: Antigravity, Claude Code, Cursor, Windsurf, Cline
