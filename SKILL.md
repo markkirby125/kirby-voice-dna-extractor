@@ -11,20 +11,7 @@ triggers: [extract-voice, voice-dna, writing-style-analysis, voice-profiler, aut
 
 ---
 
-## 1. The Voice DNA Problem
-
-Generic AI text and raw PLR share the same flaw: **tonal neutrality**. They read like a composite average of the entire internet. When human readers encounter this, subconscious alarms fire: *"This is a machine, or someone who has nothing distinct to say."*
-
-Voice is not an abstract vibe; it is a measurable set of linguistic, rhythmic, and psychological markers:
-* **Cadence:** Sentence length variance, fragment usage, transition words.
-* **Lexicon:** Signature verbs, idiomatic expressions, regional dialect, banned clichés.
-* **Posture:** Worldview, contrarian biases, level of vulnerability, pedagogical stance (mentor vs. peer vs. drill sergeant).
-
-This skill interrogates writing samples or runs a live interview to produce a **Voice DNA Specification** that any downstream agent or rewriting pipeline can enforce.
-
----
-
-## 2. The 5 Pillars of Voice DNA
+## 1. The 5 Pillars of Voice DNA
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -61,21 +48,17 @@ This skill interrogates writing samples or runs a live interview to produce a **
 
 ---
 
-## 3. Extraction Protocol
+## 2. Extraction Protocol
 
 ### Method A: Corpus Analysis (When Samples Exist)
 1. Feed 3 to 5 samples of the author's raw, unedited writing (emails, blog posts, transcripts).
-2. Run the **Linguistic Feature Extraction Query**:
-
-```markdown
-Analyze the provided text samples and extract the author's Voice DNA:
-1. Sentence length distribution (short vs. medium vs. long).
-2. Punctuation habits (em-dashes, semicolons, exclamation marks, parentheticals).
-3. Level of directness (does the author hedge with "maybe/perhaps", or use absolute imperatives?).
-4. Signature phrases and recurring metaphors.
-5. Identify 10 words or styles this author would NEVER use.
-6. Output a standardized Voice DNA Card.
-```
+2. Run the **Linguistic Feature Extraction**:
+   - Analyze sentence length distribution (short vs. medium vs. long).
+   - Analyze punctuation habits (em-dashes, semicolons, exclamation marks, parentheticals).
+   - Determine level of directness (does the author hedge with "maybe/perhaps", or use absolute imperatives?).
+   - Extract signature phrases and recurring metaphors.
+   - Identify 10 words or styles this author would NEVER use.
+   - Output a standardized Voice DNA Card (see schema below).
 
 ### Method B: Socratic Interrogation (When No Samples Exist)
 Ask the operator 5 targeted diagnostic questions:
@@ -87,7 +70,7 @@ Ask the operator 5 targeted diagnostic questions:
 
 ---
 
-## 4. Voice DNA Specification Output Schema
+## 3. Voice DNA Specification Output Schema
 
 Every extraction must output a machine-readable specification formatted as follows:
 
@@ -115,6 +98,17 @@ voice_dna:
 
 ---
 
-## 5. Downstream Integration
+## 4. Downstream Integration
 
 Once generated, save the Voice DNA spec as `voice_dna.yaml` or `voice_dna.json`. Downstream skills (`kirby-plr-personalizer`, `kirby-plr-email-sequences`, `kirby-plr-sales-converter`) ingest this spec to guarantee tonal consistency across all deliverables.
+
+---
+
+## 5. Verification Checklist
+
+Before considering the Voice DNA extraction complete, verify the following bounds:
+- [ ] Have at least 3 distinct signature terms been captured?
+- [ ] Does the taboo list include at least 5 banned terms?
+- [ ] Is the posture defined concretely (e.g., "Pragmatic Practitioner") rather than vaguely (e.g., "Friendly")?
+- [ ] Is the schema strictly adhered to in the final output?
+- [ ] Has the file been saved successfully to the `voice_dna.yaml` format for downstream use?
