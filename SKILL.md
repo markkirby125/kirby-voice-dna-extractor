@@ -1,6 +1,6 @@
 ---
 name: kirby-voice-dna-extractor
-description: "Codifies an author's unique voice, sentence cadence, vocabulary, and ideological stance into a portable Voice DNA Specification to de-genericize AI outputs."
+description: "Use when extracting or updating an author's Voice DNA spec (cadence, lexicon, posture) for PLR personalisation."
 category: writing
 triggers: [extract-voice, voice-dna, writing-style-analysis, voice-profiler, author-voice, tone-analysis]
 ---
