@@ -3,6 +3,9 @@ name: kirby-voice-dna-extractor
 description: "Use when extracting or updating an author's Voice DNA spec (cadence, lexicon, posture) for PLR personalisation."
 category: writing
 triggers: [extract-voice, voice-dna, writing-style-analysis, voice-profiler, author-voice, tone-analysis]
+risk: unverified
+author: william-fitzpatrick
+tags: [kirby, ai-agent, workflow]
 ---
 
 # SOP: Author Voice DNA Extraction & Codification
@@ -112,3 +115,14 @@ Before considering the Voice DNA extraction complete, verify the following bound
 - [ ] Is the posture defined concretely (e.g., "Pragmatic Practitioner") rather than vaguely (e.g., "Friendly")?
 - [ ] Is the schema strictly adhered to in the final output?
 - [ ] Has the file been saved successfully to the `voice_dna.yaml` format for downstream use?
+
+
+## Examples
+
+*(Add specific conversational examples here showing how the agent should behave.)*
+
+
+## Limitations (When NOT to Use)
+
+- Do not use this skill outside of its intended scope.
+- Stop and ask the user for clarification if the requirements are ambiguous.
