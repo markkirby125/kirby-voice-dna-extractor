@@ -4,7 +4,7 @@ description: "Use when extracting or updating an author's Voice DNA spec (cadenc
 category: writing
 triggers: [extract-voice, voice-dna, writing-style-analysis, voice-profiler, author-voice, tone-analysis]
 risk: unverified
-author: william-fitzpatrick
+author: paul-kirby
 tags: [kirby, ai-agent, workflow]
 ---
 
